@@ -32,7 +32,6 @@ func RunMenu(a *app.App, log *slog.Logger) error {
 	case 1:
 		user, err := loginCLI(a)
 		if err != nil {
-			log.Error("Login error: ", slog.Any("error", err))
 			fmt.Println("Ошибка при авторизации: ", err)
 			break
 		}
